@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<div class="sufee-login d-flex align-content-center flex-wrap"  >
+        <div class="container" >
+            <div class="login-content" >
+                <div class="login-logo">
+                    <a href="{% url 'home'%}">
+                        <img class="align-content" src="{% static 'home/images/logos.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="login-form" >
+                    <form method="POST">
+                    	{% csrf_token %}
+                    	
+                    	<div class="form-group">
+                    	{{ form|crispy }}
+                    	</div>
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Recordar siempre
+                            </label>
+                            <label class="pull-right">
+                                <a href="#">Olvido su contraseña?</a>
+                            </label>
+
+                        </div>
+                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30" id="submit_button">Login</button>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+{% endblock %}

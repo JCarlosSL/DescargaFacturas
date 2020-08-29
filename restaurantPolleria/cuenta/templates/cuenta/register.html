@@ -1,0 +1,64 @@
+
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+{% include 'home/leftpanel.html' %}
+
+<!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        {% include 'home/header.html' %}
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Animated -->
+            <div class="animated fadeIn">
+      
+      		<div class="card">
+
+            
+            	<div class="row page-titles" >
+                    <div class="col-md-5 align-self-center">
+                        <strong class="card-title col-sm-8"><h3> Registrar Trabajador</h3></strong>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active">Registrar</li>
+                        </ol>
+                    </div>
+                    
+                </div>
+      
+                <div class="login-form" >
+                    <form method="POST">
+                    	{% csrf_token %}
+                    	
+                    	<div class="form-group">
+                    	{{ form|crispy }}
+                    	</div>
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Acepte termino y condiciones
+                            </label>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30" id="register">Registrar</button>
+                        
+                        
+                    </form>
+                </div>
+
+
+			</div>
+            </div>
+            <!-- .animated -->
+        </div>
+        
+        
+    </div>
+    <!-- /#right-panel -->
+
+
+	
+{% endblock %}

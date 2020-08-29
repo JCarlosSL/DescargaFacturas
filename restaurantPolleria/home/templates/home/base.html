@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD-->
+{% include 'home/lib/head.html' %}
+
+<!-- HEAD-->
+<body>
+	
+	
+    {% block content %}
+      
+    {% endblock  %}
+	
+<!-- SCRIPTS -->
+{% include 'home/lib/script.html' %}
+<script>
+jQuery(function ($) {
+        var testsTable = $('.tests').dataTable({
+                "pagingType": "full_numbers",
+        });
+});
+  	</script>
+<!-- SCRIPTS -->
+</body>
+</html>

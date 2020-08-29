@@ -1,0 +1,22 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+<div class="sufee-login d-flex align-content-center flex-wrap " >
+        <div class="container">
+            <div class="login-content" >
+                <div class="login-logo">
+                    <a href="{% url 'home'%}">
+                        <img class="align-content" src="{% static 'home/images/logos.png' %}" alt="">
+                    </a>
+                </div>
+   <h1>Has sido desconectado</h1>
+    <div class="form-group" >
+		<a href="{% url 'login' %}" class="btn btn-outline-success btn-lg btn-block" >Ingresar de nuevo</a>
+        
+    </div>
+   
+   
+    </div>
+        </div>
+    </div>
+{% endblock content %}

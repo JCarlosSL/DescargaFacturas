@@ -1,0 +1,75 @@
+{% load static%}
+<!-- Left Panel -->
+    <aside id="left-panel" class="left-panel ">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="{% url 'home' %}" id='id-home'>Home </a>
+                    </li>
+                    <li class="menu-title">Filtro</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ">año</i></a>
+                        <ul class="sub-menu children dropdown-menu">                            
+                        	<li><i class="fa "></i><a href="{% url 'anho' ango=2010 %}">2010</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2011 %}">2011</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2012 %}">2012</a></li>
+
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2013 %}">2013</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2014 %}">2014</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2015 %}">2015</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2016 %}">2016</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2017 %}">2017</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2018 %}">2018</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2019 %}">2019</a></li>
+                            <li><i class="fa "></i><a href="{% url 'anho' ango=2020 %}">2020</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon">mes</i></a>
+                        {%if anho %}
+                        <ul class="sub-menu children dropdown-menu">
+                        	
+                        	<li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='01' %}">enero</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='02' %}">Febrero</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='03' %}">Marzo</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='04' %}">Abril</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='05' %}">Mayo</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='06' %}">Junio</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='07' %}">Julio</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='08' %}">Agosto</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='09' %}">Setiembre</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='10' %}">Octubre</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='11' %}">Noviembre</a></li>
+                            <li><i class="fa "></i><a href="{% url 'mes' ango=anho mes='12' %}">Diciembre</a></li>
+                            
+                        
+                        </ul>
+                        {% endif %}
+                    </li>
+                    
+                    <li class="menu-title">Administración</li><!-- /.menu-title -->
+                    
+                   <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon">Registrar</i></a>
+                        <ul class="sub-menu children dropdown-menu">
+                        	{% if user.is_superuser %}                            
+                        	
+                            <li><i class="fa "></i><a href="{% url 'register' %}">Registrar Trabajador</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon">Administrar</i></a>
+                        <ul class="sub-menu children dropdown-menu">                            
+                        	<li><i class="fa "></i><a href="#">Administrar Trabajador</a></li>
+          
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
