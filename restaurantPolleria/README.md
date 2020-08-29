@@ -25,7 +25,7 @@ $ pip install django-selenium
 
 1. Clonar Repositorio
 ```sh
-git Clone https://gitlab.com/frego100/food-company-project.git
+git Clone https://github.com/JCarlosSL/DescargaFacturas.git
 ```
 ## Compilación
 
@@ -63,7 +63,3 @@ _Herramientas usadas en el proyecto_
 - Oxa Cacya, Shirley
 - Soncco Lupa, Jean Carlos
 - Villanueva Sanchez, Fernando Thomas
-
-## Contacto
-Puede contactarnos a traves del siguiente correo
-[expendedora24@gmail.com](expendedora24@gmail.com)
